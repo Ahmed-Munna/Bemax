@@ -1,0 +1,144 @@
+@import 'media';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: $primary-font;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+
+    @media#{$small_device}{
+       max-width: 95%;
+    }
+    @media#{$tab_device }{
+        max-width: 90%;
+     }
+     @media#{$medium_device}{
+        max-width: 90%;
+     }
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.btn{
+    font-size: 15px;
+    background:$primary;
+    text-decoration: none;
+    font-weight: bold;
+    color: $text-light;
+    padding: 20px 40px;
+    display: inline-block;
+    &:hover{
+        background: $dark;
+    }
+}
+.py-7{
+    padding: 70px 0;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media#{$small_device}{
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    @media#{$tab_device }{
+       flex-wrap: wrap;
+    }
+}
+.col-6{
+    width: 48.72%;
+    margin-right: 2.56%;
+    overflow: hidden;
+    &:last-child{
+        margin-right: 0;
+    }
+    @media#{$small_device}{
+        width: 100%;
+        margin-bottom: 30px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    @media#{$tab_device }{
+        width: 100%;
+     }
+}
+.col-3{
+    width: 25%;
+    overflow: hidden;
+    @media#{$small_device}{
+        width: 100%;
+
+    }
+    @media#{$tab_device }{
+        width: 48.72%;
+    }
+  
+}
+.col-4{
+    width: 31.623%;
+    margin-right: 2.56%;
+    overflow: hidden;
+    &:last-child{
+        margin-right: 0;
+    }
+    @media#{$small_device}{
+        width: 100%;
+        margin-right: 0%;
+        margin-bottom: 2.56%;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    @media#{$tab_device }{
+        width: 48.72%;
+        margin-right: 2.56%;
+        margin-bottom: 2.56%;
+        overflow: hidden;
+        &:last-child{
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+        &:nth-child(2){
+            margin-right: 0;
+        }
+    }
+}
+.col-12{
+    width: 100%;
+    text-align: center;
+}
+.section-title{
+    text-transform: uppercase;
+    margin-bottom: 80px;
+
+        h2{
+            font-weight: 800;
+            font-size: 20px;
+            color:$light-dark;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            &::after{
+                position: absolute;
+                background: $after-color;
+                height: 2px;
+                width: 50px;
+                content: '';
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+        }
+        
+}
